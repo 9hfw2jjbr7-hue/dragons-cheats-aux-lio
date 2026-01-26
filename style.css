@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.panel {
+  width: 340px;
+  margin: 30px auto;
+  border: 2px solid blue;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 0 30px blue;
+}
+
+.title {
+  background: blue;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tabs button {
+  flex: 1;
+  background: rgb(80, 80, 241);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: rgb(122, 121, 121);
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+label {
+  display: block;
+  margin: 6px 0;
+}
+
+input[type="range"],
+select {
+  width: 100%;
+  margin-bottom: 10px;
+}

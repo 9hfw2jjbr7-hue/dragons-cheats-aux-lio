@@ -1,48 +1,128 @@
-body {
-  margin: 0;
-  background: rgb(0, 0, 0);
-  color: white;
+* {
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
-.panel {
-  width: 340px;
-  margin: 30px auto;
-  border: 2px solid blue;
-  border-radius: 14px;
-  padding: 12px;
-  box-shadow: 0 0 30px blue;
+/* ===== FUNDO GERAL ===== */
+body,
+.bg {
+  margin: 0;
+  min-height: 100vh;
+  background: #050b16;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
 }
 
+/* ===== LOGIN ===== */
+.login-box {
+  background: #0b1630;
+  border: 2px solid #1e5eff;
+  box-shadow: 0 0 20px #1e5eff;
+  padding: 30px;
+
+  width: 100%;
+  max-width: 360px;
+
+  border-radius: 14px;
+  text-align: center;
+}
+
+.login-box h1 {
+  color: #1e5eff;
+  margin-bottom: 6px;
+}
+
+.login-box p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+
+  background: #050b16;
+  border: 1px solid #1e5eff;
+  color: white;
+
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+
+  background: #1e5eff;
+  border: none;
+  border-radius: 8px;
+
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#msg {
+  display: block;
+  margin-top: 10px;
+  color: red;
+  font-size: 14px;
+}
+
+/* ===== PAINEL ===== */
+.panel {
+  background: #0b1630;
+  border: 2px solid #1e5eff;
+  box-shadow: 0 0 30px #1e5eff;
+
+  width: 100%;
+  max-width: 360px;
+
+  border-radius: 16px;
+  padding: 14px;
+}
+
+/* ===== TITULO ===== */
 .title {
-  background: blue;
-  padding: 10px;
+  background: #1e5eff;
+  padding: 12px;
   text-align: center;
   font-weight: bold;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
 }
 
+/* ===== ABAS ===== */
 .tabs {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   margin-bottom: 12px;
 }
 
 .tabs button {
   flex: 1;
-  background: rgb(80, 80, 241);
+  background: #1e5eff;
   border: none;
   color: white;
-  padding: 8px;
-  border-radius: 8px;
+
+  padding: 10px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .tabs button.active {
-  background: rgb(122, 121, 121);
+  background: #6c6c6c;
 }
 
+/* ===== CONTEÚDO ===== */
 .content {
   display: none;
 }
@@ -53,11 +133,25 @@ body {
 
 label {
   display: block;
-  margin: 6px 0;
+  margin: 8px 0;
+  font-size: 14px;
 }
 
 input[type="range"],
 select {
   width: 100%;
   margin-bottom: 10px;
+}
+
+/* ===== MOBILE EXTRA ===== */
+@media (max-width: 480px) {
+  .login-box,
+  .panel {
+    padding: 24px;
+  }
+
+  .tabs button {
+    font-size: 13px;
+    padding: 12px;
+  }
 }
